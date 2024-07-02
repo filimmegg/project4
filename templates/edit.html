@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit film</h2>
+<form action="{{ url_for('edit_record', film_id=record[0]) }}" method="post">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" value="{{ record[1] }}" required><br>
+    <label for="year">Year Released:</label><br>
+    <input type="number" id="year" name="year" value="{{ record[2] }}" required><br>
+    <label for="rating">Rating:</label><br>
+    <input type="text" id="rating" name="rating" value="{{ record[3] }}" required><br>
+    <label for="duration">Duration (minutes):</label><br>
+    <input type="number" id="duration" name="duration" value="{{ record[4] }}" required><br>
+    <label for="genre">Genre:</label><br>
+    <input type="text" id="genre" name="genre" value="{{ record[5] }}" required><br>
+    <input type="submit" value="Update">
+</form>
+{% endblock %}

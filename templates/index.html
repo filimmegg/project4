@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Film ID</th>
+        <th>Title</th>
+        <th>Year Released</th>
+        <th>Rating</th>
+        <th>Duration</th>
+        <th>Genre</th>
+        <th>Actions</th>
+    </tr>
+    {% for record in records %}
+    <tr>
+        <td>{{ record[0] }}</td>
+        <td>{{ record[1] }}</td>
+        <td>{{ record[2] }}</td>
+        <td>{{ record[3] }}</td>
+        <td>{{ record[4] }}</td>
+        <td>{{ record[5] }}</td>
+        <td>
+            <a class ="edit" href="{{ url_for('edit_record', film_id=record[0]) }}">Edit</a>
+            <a class ="delete" href="{{ url_for('delete_record', film_id=record[0]) }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="container2">
+    <h2>Add a new film</h2>
+    <form action="{{ url_for('add_record') }}" method="post">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="year">Year Released:</label><br>
+        <input type="number" id="year" name="year" required><br>
+        <label for="rating">Rating:</label><br>
+        <input type="text" id="rating" name="rating" required><br>
+        <label for="duration">Duration (minutes):</label><br>
+        <input type="number" id="duration" name="duration" required><br>
+        <label for="genre">Genre:</label><br>
+        <input type="text" id="genre" name="genre" required><br>
+     <input type="submit" value="Add">
+    </form>
+</div>
+{% endblock %}

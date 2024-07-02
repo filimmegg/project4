@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body {
+    background-color: #333;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    width: 70%;
+    margin: 30px auto;
+    background: #b7b7a4;
+    padding: 20px;
+    box-shadow: 0 0 20px #FDFCDC;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #4a5759;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+input[type="text"], input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #4a5759;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0081A7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.edit {
+    text-decoration: none;
+    color: #4cae4c;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.delete {
+    text-decoration: none;
+    color: #F07167;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.edit:hover {
+    color: #008000;
+}
+
+.delete:hover {
+    color: #c9184a;
+}
+
+h2 {
+    color: black;
+    font-size: 40px;
+}
